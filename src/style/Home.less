@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.Home {
+  .homemain {
+    width: 100vw;
+    height: 100vh;
+    background-color: #fca53e;
+  }
+  // 定义宽高的函数
+  .wh(@width, @height) {
+    width: @width;
+    height: @height;
+  }
+
+  header {
+    width: 100%;
+    height: 2rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: #fca53e;
+    margin: 0 auto 1rem;
+    .headerright {
+      font-size: 0.8rem;
+    }
+  }
+
+  //定位开始
+
+  // 定位结束
+
+  // 搜索框开始
+  .search {
+    .wh(90%,2rem);
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #f0cb9a;
+    border-radius: 1rem;
+    border: 1px solid white;
+    .van-icon {
+      &::before {
+        text-indent: 1.5rem;
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+    input {
+      // text-indent: 2rem;
+      width: 82%;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: white;
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+  // 搜索框结束
+
+  // 推荐景点开始
+  .jingd {
+    .wh(90%,1.5rem);
+    margin: 1rem auto;
+    ul {
+      .wh(100%,1.5rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        .wh(16%,1.5rem);
+        border-radius: 1rem;
+        line-height: 1.5rem;
+        color: white;
+        text-align: center;
+        font-size: 0.8rem;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  // 推荐景点结束
+
+  // 导航栏开始
+  .nav {
+    .wh(90%,4rem);
+    margin: 1rem auto;
+    figure {
+      .wh(100%,4rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .pai {
+        width: 25%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        div {
+          width: 100%;
+          height: 80%;
+          img {
+            width: 70%;
+            height: 70%;
+            border-radius: 50%;
+            background-color: #fff;
+          }
+        }
+        p {
+          .wh(100%,20%);
+          color: white;
+          font-size: 0.8rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  // 导航栏结束
+
+  // 热门景点开始
+  .hot {
+    .wh(100%,auto);
+    border-top: 1px solid transparent;
+    border-radius: 2rem;
+    background-color: #fff;
+    margin-bottom: 4rem;
+    .hottop {
+      .wh(100%,2rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      box-sizing: border-box;
+      margin: 2rem auto;
+      p {
+        color: #e8c482;
+        font-size: 0.8rem;
+      }
+    }
+    .datail {
+      .wh(100%,auto);
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      .area {
+        margin-bottom: 1rem;
+        .wh(100%, auto);
+        .datop {
+          .wh(100%,auto);
+          img {
+            .wh(100%,9rem);
+            border-radius: 1rem;
+          }
+        }
+        h2 {
+          .wh(100%,2rem);
+          font-size: 1rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          text-align: left;
+        }
+        .test {
+          text-align: left;
+          color: #ccc;
+        }
+        .tag {
+          display: flex;
+          span {
+            background-color: #ecf2ff;
+            padding: 0.25rem;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            // border: #ccc 1px solid;
+            color: #759be1;
+            margin-right: 0.5rem;
+          }
+        }
+        figure {
+          .wh(100%,2rem);
+          margin: 0.25rem 0;
+          display: flex;
+          justify-content: space-between;
+          .fileft,
+          .firight {
+            .wh(40%,100%);
+            text-align: center;
+          }
+          .firight {
+            display: flex;
+            span:nth-child(1) {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 热门景点结束
+}

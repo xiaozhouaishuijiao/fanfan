@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.forget {
+  .wh(@width,@height) {
+    width: @width;
+    height: @height;
+  }
+
+  .forgetmain {
+    .wh(100vw,100vh);
+    background-color: #fdb656;
+  }
+
+  header {
+    .wh(100%,4rem);
+    display: flex;
+    align-items: center;
+    .left {
+      .wh(15%,100%);
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+    }
+    .middle {
+      .wh(80%,100%);
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      h3 {
+        .wh(88%,100%);
+        text-align: center;
+        color: #fef0e3;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .van-icon {
+      color: white;
+    }
+  }
+  //    顶部状态栏结束
+
+  //   表单内容开始
+  .form {
+    .wh(70%,16rem);
+    margin: 2rem auto 0;
+    div {
+      position: relative;
+      .wh(100%, 25%);
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid white;
+      p {
+        .wh(36%,50%);
+        border-radius: 1rem;
+        border: 1px solid white;
+        color: white;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 25%;
+        right: 0;
+        font-size: 0.8rem;
+      }
+      input {
+        .wh(100%,50%);
+        outline: none;
+        border: none;
+        font-size: 0.9rem;
+        color: white;
+
+        background-color: transparent;
+        &::placeholder {
+          color: white;
+        }
+      }
+    }
+  }
+  //表单内容结束
+
+  //   完成按钮开始
+  .finish {
+    .wh(70%,3rem);
+    background-color: #fff;
+    border-radius: 1rem;
+    color: #fdb656;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin: 2rem auto 0;
+  }
+  // 完成按钮结束
+}

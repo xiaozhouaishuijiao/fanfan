@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  background-color: #fff;
+}
+
+.report {
+  .wh(@widhth,@height) {
+    width: @widhth;
+    height: @height;
+  }
+  header {
+    .wh(100%,4rem);
+    display: flex;
+    align-items: center;
+    .left {
+      .wh(15%,100%);
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+    }
+    .middle {
+      .wh(80%,100%);
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      h3 {
+        .wh(88%,100%);
+        text-align: center;
+        color: black;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .van-icon {
+      color: black;
+    }
+  }
+  //   头部内容结束
+
+  // 举报信息内容开始
+
+  // 举报信息内容结束
+
+  // 提交按钮开始
+
+  // 提交按钮结束
+}

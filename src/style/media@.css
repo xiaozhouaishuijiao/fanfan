@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@media screen and (min-width:375px) {
+
+    /* 18.75 */
+    html {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:393px) {
+    html {
+        font-size: 20.96px;
+    }
+}
+
+
+@media screen and (min-width:414px) {
+
+    /* 18.75 */
+    html {
+        font-size: 22.08px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    html {
+        font-size: 40.96px;
+    }
+}
+
+@media screen and (min-width:820px) {
+
+    /* 18.75 */
+    html {
+        font-size: 43.73333333333333px;
+    }
+}

@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.expert {
+  .wh(@width, @height) {
+    width: @width;
+    height: @height;
+  }
+
+  .expertmain {
+    .wh(100vw,100vh);
+    background-color: #f7f7f7;
+  }
+  //   头部开始
+  header {
+    .wh(100%,4rem);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div {
+      .wh(18%,100%);
+      position: relative;
+      h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+    }
+    p {
+      .wh(100%,100%);
+    }
+    .van-icon {
+      position: absolute;
+      top: 0.2rem;
+      right: 1.2rem;
+      &::before {
+        color: orange;
+        font-size: 3.2rem;
+      }
+    }
+  }
+  //   头部结束
+
+  //搜索内容开始
+  .search {
+    .wh(100%,2rem);
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: end;
+    background-color: #fff;
+    div {
+      .wh(37%,100%);
+      border-radius: 1rem;
+      background-color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      text-indent: 0.25rem;
+    }
+    input {
+      .wh(70%,100%);
+      border: none;
+      outline: none;
+      background-color: transparent;
+      text-align: center;
+      &::placeholder {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  // 搜索内容结束
+
+  //   导航栏及商品内容开始
+  nav {
+    padding: 0;
+    margin-bottom: 3rem;
+    .wh(100%, auto);
+    .van-tabs__content {
+      .wh(95%,auto);
+      margin: 1rem auto;
+    }
+    .van-tab__pane {
+      .wh(100%,auto);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .goodsleft,
+      .goodsright {
+        .wh(48%,auto);
+        .goodsdatail {
+          display: flex;
+          flex-wrap: wrap;
+          border-radius: 1rem;
+          background-color: #fff;
+          margin-bottom: 1rem;
+          img {
+            .wh(100%,4rem);
+            border-radius: 1rem 1rem 0 0;
+          }
+          .tag {
+            .wh(100%,1rem);
+            color: #52c2a9;
+          }
+          .title {
+            .wh(100%,3rem);
+            text-align: left;
+            padding: 0 0.5rem;
+            box-sizing: border-box;
+            margin: 0.5rem 0;
+            overflow: hidden;
+            -webkit-box-orient: vertical; //从上到下排列子元素;
+            text-overflow: ellipsis; //溢出部分用省略号代替
+            -webkit-line-clamp: 2; //设置文本显示两行
+          }
+          .msg {
+            .wh(100%,2rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 0.5rem;
+            box-sizing: border-box;
+            .left {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              .wh(50%, 100%);
+              font-size: 0.6rem;
+              color: #ccc;
+              img {
+                .wh(50%,50%);
+                border-radius: 50%;
+              }
+            }
+            .right {
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+  }
+  //导航栏及商品内容结束
+
+  .fabu {
+    .wh(3.5rem,3.5rem);
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    padding: 2%;
+    box-sizing: border-box;
+    align-items: center;
+    flex-wrap: wrap;
+    right: 2rem;
+    bottom: 8rem;
+    background-color: orange;
+    color: white;
+    .van-icon {
+      .wh(100%,60%);
+      &::before {
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      .wh(100%,30%);
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  }
+}

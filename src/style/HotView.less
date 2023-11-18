@@ -1,0 +1,154 @@
+.Hot {
+  // 定义宽高的函数
+  .wh(@width, @height) {
+    width: @width;
+    height: @height;
+  }
+
+  header {
+    width: 100%;
+    height: 2rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: #fca53e;
+    margin: 1rem auto;
+    .headerleft {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      .van-icon {
+        &::before {
+          font-size: 1.5rem;
+          color: white;
+        }
+      }
+    }
+  }
+
+  // 搜索框开始
+  .search {
+    .wh(90%,2rem);
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #f0cb9a;
+    border-radius: 1rem;
+    border: 1px solid white;
+    .van-icon {
+      &::before {
+        text-indent: 1.5rem;
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+    input {
+      // text-indent: 2rem;
+      width: 82%;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: white;
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+  // 搜索框结束
+
+  // 推荐景点开始
+  .jingd {
+    .wh(90%,1.5rem);
+    margin: 1rem auto;
+    ul {
+      .wh(100%,1.5rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        .wh(16%,1.5rem);
+        border-radius: 1rem;
+        line-height: 1.5rem;
+        color: white;
+        text-align: center;
+        font-size: 0.8rem;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+  // 推荐景点结束
+
+  // 热门推荐开始
+  .tuijian {
+    border-top: 1px solid transparent;
+    .wh(100%,auto);
+    padding: 0 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    h2 {
+      // .wh(12%,50%);
+      text-align: left;
+      font-size: 1rem;
+      margin: 1rem 0;
+      &::after {
+        content: "";
+        display: block;
+        color: orange;
+        .wh(1rem,0.25rem);
+        text-align: center;
+        background-color: orange;
+      }
+    }
+    .content {
+      .wh(100%,auto);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .datail {
+        .wh(48%,10rem);
+        margin-bottom: 0.5rem;
+        img {
+          .wh(100%,6rem);
+          border-radius: 1rem;
+        }
+        h4 {
+          .wh(100%,2rem);
+          font-size: 0.7rem;
+          text-align: left;
+        }
+        p {
+          color: #ccc;
+          text-align: left;
+          font-size: 0.8rem;
+          span {
+            margin-right: 0.2rem;
+          }
+        }
+        figure {
+          .wh(100%,1rem);
+          font-size: 0.8rem;
+          display: flex;
+          justify-content: space-between;
+          .pri {
+            color: red;
+          }
+          .dan {
+            color: #ccc;
+          }
+          span {
+            font-size: 0.8rem;
+          }
+          .number {
+            color: #ccc;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+  // 热门推荐结束
+}

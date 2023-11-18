@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+// 定义宽高函数
+.wh(@width,@height) {
+  width: @width;
+  height: @height;
+}
+
+body {
+  background-color: #fdb656;
+}
+
+.register {
+  // 头部状态栏开始
+  header {
+    .wh(100%,1rem);
+    background-color: red;
+  }
+  // 头部状态栏结束
+
+  // logo图标开始
+  .logo {
+    .wh(90%,3rem);
+    margin: 1rem auto;
+  }
+  // logo图标结束
+
+  // 表单内容开始
+  .input-box {
+    .wh(74%,10rem);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: end;
+    div {
+      .wh(80%,2rem);
+      position: relative;
+      margin: 0 auto;
+      input {
+        .wh(100%,100%);
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid white;
+        font-size: 1rem;
+        padding: 0.8rem 0;
+        box-sizing: border-box;
+        &::placeholder {
+          color: #feebd9;
+        }
+      }
+    }
+
+    div:nth-child(2) {
+      position: relative;
+      p {
+        .wh(5rem,50%);
+        position: absolute;
+        top: 10%;
+        right: 0;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        border: 1px solid white;
+        color: white;
+      }
+    }
+    .ding {
+      margin-top: 2rem;
+    }
+  }
+
+  //   登录注册按钮开始
+  .butt {
+    .wh(66%,8rem);
+    // background-color: skyblue;
+    margin: 0 auto;
+    .nohave {
+      .wh(100%,2rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #aca2a2;
+    }
+    .log,
+    .reg {
+      border-radius: 1rem;
+      border: 1px solid white;
+      .wh(100%,2.25rem);
+      line-height: 2.25rem;
+    }
+    .log {
+      background-color: white;
+      color: #fdb656;
+    }
+    .reg {
+      color: white;
+    }
+  }
+  // 登录注册按钮结束
+
+  //   其他登录方式开始
+  .other {
+    .wh(72%,4rem);
+    margin: 1.5rem auto 0;
+    .or {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .wh(100%,0.75rem);
+      margin: 0 auto;
+      .left,
+      .right {
+        .wh(33%,0.1rem);
+        background-color: gray;
+      }
+    }
+    .third {
+      .wh(92%,3rem);
+      margin: 0 auto;
+      margin-top: 1rem;
+      display: flex;
+      div {
+        flex: 1;
+      }
+    }
+  }
+  // 其他登录方式结束
+  figure {
+    color: red;
+    position: absolute;
+    top: -33%;
+    left: 0;
+    font-size: 0.8rem;
+    display: none;
+  }
+}

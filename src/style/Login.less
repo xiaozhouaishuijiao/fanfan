@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: #fdb656;
+}
+
+.wh(@width,@height) {
+  width: @width;
+  height: @height;
+}
+
+.login {
+  // 头部状态栏开始
+  height: auto;
+  header {
+    .wh(100%,1rem);
+    background-color: skyblue;
+  }
+  // 头部状态栏结束
+
+  // logo图标开始
+  .logo {
+    .wh(52%,2.5rem);
+    margin: 1rem auto;
+  }
+  // logo图标结束
+
+  // 表单内容开始
+  .van-tabs {
+    .wh(80%,12rem);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .van-tabs__content {
+      .wh(80%,80%);
+      margin: 0 auto;
+    }
+    .van-tab__pane {
+      .wh(100%,100%);
+      .contenty {
+        .wh(100%,100%);
+      }
+    }
+    .van-tabs__wrap {
+      width: 100%;
+      height: 1.5rem;
+      .van-tabs__line {
+        // display: none;
+        width: 0.5rem;
+        height: 0.1rem;
+        color: red;
+        background-color: red;
+      }
+      .van-tabs__nav {
+        .wh(90%,2rem);
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        background-color: transparent;
+        .van-tab {
+          flex: 1;
+          //   text-align: center;
+          font-size: 0.9rem;
+          color: white;
+        }
+      }
+    }
+  }
+  .top {
+    .wh(100%,50%);
+    input {
+      width: 90%;
+      height: 3rem;
+      background-color: transparent !important;
+      //   padding-bottom: 0.5rem;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      color: white;
+      &::placeholder {
+        color: #feebd9;
+      }
+      border-bottom: 1px solid #f1f1f1;
+    }
+  }
+  .bottom {
+    .wh(100%,50%);
+    margin-bottom: 2rem;
+    input {
+      width: 90%;
+      height: 3rem;
+      background-color: transparent !important;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      color: white;
+      &::placeholder {
+        color: #feebd9;
+      }
+      //   padding-bottom: 0.5rem;
+      border-bottom: 1px solid #f1f1f1;
+    }
+  }
+  .van-tab__text {
+    color: white;
+  }
+
+  //   登录注册按钮开始
+  .butt {
+    .wh(88%,8.5rem);
+    // background-color: skyblue;
+    margin: 0 auto;
+    .title {
+      .wh(100%,1.5rem);
+      color: #aca2a2;
+      text-align: right;
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+    }
+    .nohave {
+      .wh(100%,2rem);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: #aca2a2;
+    }
+    .log,
+    .reg {
+      border-radius: 1rem;
+      border: 1px solid white;
+      .wh(100%,2.25rem);
+      line-height: 2.25rem;
+    }
+    .log {
+      background-color: white;
+      color: #fdb656;
+    }
+    .reg {
+      color: white;
+    }
+  }
+  // 登录注册按钮结束
+
+  //   其他登录方式开始
+  .other {
+    .wh(88%,4rem);
+    margin: 1.5rem auto 0;
+    .or {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .wh(100%,0.75rem);
+      margin: 0 auto;
+      .left,
+      .right {
+        .wh(33%,0.1rem);
+        background-color: gray;
+      }
+    }
+    .third {
+      .wh(92%,3rem);
+      margin: 0 auto;
+      margin-top: 1rem;
+      display: flex;
+      div {
+        flex: 1;
+      }
+    }
+  }
+  // 其他登录方式结束
+  input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    &::placeholder {
+      color: white;
+    }
+  }
+  .first,
+  .second {
+    .wh(100%,50%);
+    input {
+      font-size: 1rem;
+      color: white;
+      .wh(90%,3rem);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      &::placeholder {
+        color: #feebd9;
+      }
+    }
+  }
+
+  .second {
+    position: relative;
+    p {
+      position: absolute;
+      top: 10%;
+      right: 5%;
+      .wh(5rem,32%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1rem;
+      border: 1px solid white;
+      font-size: 0.8rem;
+      color: #feebd9;
+    }
+  }
+
+  .van-tab--active::before {
+    // content: "";
+    .wh(1rem,0.25rem);
+    background-color: red;
+    transform: translateX(118px);
+    transition-duration: 0.3s;
+  }
+}
